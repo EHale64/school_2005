@@ -28,4 +28,10 @@ class School
   def standard_student_names
     @student_names.map { |name| name.capitalize }
   end
+
+  def convert_end_time_to_clock_time
+    begining = start_time.to_i
+    total_time = begining + hours_in_school_day - 12
+    total_time.to_s + ":00"
+  end
 end
