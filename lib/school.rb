@@ -24,4 +24,8 @@ class School
       false
     end
   end
+
+  def standard_student_names
+    @student_names.map { |name| name.capitalize }
+  end
 end
