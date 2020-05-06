@@ -31,7 +31,14 @@ class School
 
   def convert_end_time_to_clock_time
     begining = start_time.to_i
-    total_time = begining + hours_in_school_day - 12
-    total_time.to_s + ":00"
+
+    total_time = begining + hours_in_school_day
+
+    if total_time >= 13
+      civilian_time = total_time - 12
+      civilian_time.to_s + ":00"
+    elsif total_time < 13
+      total_time.to_s + ":00"
+    end
   end
 end
