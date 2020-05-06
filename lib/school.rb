@@ -16,4 +16,12 @@ class School
     total_time = begining + hours_in_school_day
     total_time.to_s + ":00"
   end
+
+  def is_full_time?
+    if hours_in_school_day >= 4
+      true
+    else
+      false
+    end
+  end
 end
